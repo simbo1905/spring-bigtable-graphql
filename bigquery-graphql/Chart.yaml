@@ -1,6 +1,6 @@
 apiVersion: v2
-name: bigquery-graphql
-description: Demo of running GraphQL over BigQuery
+name: bigtable-graphql
+description: Demo of running GraphQL over bigtable
 
 # A chart can be either an 'application' or a 'library' chart.
 #

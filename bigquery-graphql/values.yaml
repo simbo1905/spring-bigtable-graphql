@@ -1,5 +1,5 @@
-# Default values for bigquery-graphql.
-name: bigquery-graphql
+# Default values for bigtable-graphql.
+name: bigtable-graphql
 namespace: default
-image: docker.io/simonmassey/bigquery-graphql
-tag: 1.0.4
+image: docker.io/simonmassey/bigtable-graphql
+tag: 1.0.3

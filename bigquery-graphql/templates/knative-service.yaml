@@ -19,19 +19,19 @@ spec:
             #   secret content in the Kubernetes secret.  This can be changed
             #   if both places are changed.
             - name: GOOGLE_APPLICATION_CREDENTIALS
-              value: /var/secret/bigquery-sa.json
+              value: /var/secret/bigtable-sa.json
             - name: hello
               value: world2
 
           # This section specified where in the container we want the
           # volume containing our secret to be mounted.
           volumeMounts:
-            - name: graphql-bigquery-secret
+            - name: graphql-bigtable-secret
               mountPath: /var/secret
 
-      # This section attaches the secret "graphql-bigquery-secret" to
+      # This section attaches the secret "graphql-bigtable-secret" to
       # the Pod holding the user container.
       volumes:
-        - name: graphql-bigquery-secret
+        - name: graphql-bigtable-secret
           secret:
-            secretName: graphql-bigquery-secret
+            secretName: graphql-bigtable-secret

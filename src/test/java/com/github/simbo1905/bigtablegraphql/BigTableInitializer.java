@@ -1,4 +1,4 @@
-package com.github.simbo1905.bigquerygraphql;
+package com.github.simbo1905.bigtablegraphql;
 
 import com.google.api.gax.rpc.NotFoundException;
 import com.google.cloud.bigtable.admin.v2.BigtableTableAdminClient;

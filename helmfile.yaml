@@ -1,9 +1,9 @@
 repositories:
-  - name: bigquery-graphql 
-    url: https://simbo1905.github.io/bigquery-graphql/charts
+  - name: bigtable-graphql 
+    url: https://simbo1905.github.io/bigtable-graphql/charts
 releases:
-  - name: bigquery-graphql2
-    chart: bigquery-graphql/bigquery-graphql
-    version: "1.0.4"
+  - name: bigtable-graphql
+    chart: bigtable-graphql/bigtable-graphql
+    version: "1.0.3"
     values:
-      - name: bigquery-graphql2
+      - name: bigtable-graphql

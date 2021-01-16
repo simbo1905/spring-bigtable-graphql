@@ -1,4 +1,4 @@
-package com.github.simbo1905.bigquerygraphql;
+package com.github.simbo1905.bigtablegraphql;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;

@@ -1,4 +1,4 @@
-package com.github.simbo1905.bigquerygraphql;
+package com.github.simbo1905.bigtablegraphql;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
