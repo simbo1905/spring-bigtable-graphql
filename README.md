@@ -120,5 +120,41 @@ On the Google Cloud console:
 
 Note in 2020.3 IntelliJ it is refusing to pickup `application.properties` that file as [IDEA-221673](https://youtrack.jetbrains.com/issue/IDEA-221673?_ga=2.261730190.2065449588.1610823467-1536685944.1605418802)
 
+## Run On KNative
+
+Do the first helloworld deployment from the video [Serverless with Knative - Mete Atamel](https://www.youtube.com/watch?v=HiIJqMqFbC0).
+**Note** The latest setup material is at [https://github.com/meteatamel/knative-tutorial/tree/master/setup](https://github.com/meteatamel/knative-tutorial/tree/master/setup) and you *only* need to setup Knative Serving and not anything else.
+
+We need to create a secret containing your service account token.
+
+Using [these instructions](https://knative.dev/docs/serving/samples/secrets-go/) I found that this worked:
+
+```sh
+kubectl create secret generic graphql-bigtable --from-file=bigtable-sa.json
+```
+
+Grab the latest helm and put it on your path. Then install the KNative service with:
+
+```sh
+helm install bigtable-graphql ./bigtable-graphql
+```
+
+Better yet use [github pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site) and create a chart repo:
+
+```sh
+helm package bigtable-graphql
+mv bigtable-graphql-1.0.3.tgz charts/
+helm repo index charts --url https://${YOUR_ORG}.github.io/bigtable-graphql/charts
+git add charts/*
+git commit -am 'charts update'
+git pull && git push
+```
+
+Now you can use the declarative helmfile.yaml to update all the services with:
+
+```sh
+helmfile sync
+```
+
 
 

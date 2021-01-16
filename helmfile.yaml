@@ -4,6 +4,6 @@ repositories:
 releases:
   - name: bigtable-graphql
     chart: bigtable-graphql/bigtable-graphql
-    version: "1.0.3"
+    version: "1.0.3.1"
     values:
       - name: bigtable-graphql
