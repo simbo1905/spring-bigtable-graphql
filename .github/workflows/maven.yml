@@ -14,7 +14,8 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    environment: bigtable-graphql
+    # note! i am sharing this environment between two projects
+    environment: bigquery-graphql
 
     steps:
     - uses: actions/checkout@v2
