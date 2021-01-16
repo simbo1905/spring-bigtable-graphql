@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "capable-conduit-300818",
+  "private_key_id": "67c1830a4231b5f1148c285257033c2e537c10e0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCZFd0utj3fByIe\nwUvWkw0UDs/pWX8EV/rS3nmHSQ9474oLvVRqXY7GCshJHscdg5d1IxsJqv9yALMu\nFi16TvfRssYLnnqZANuM6b8oRc+Y+q2mHN59xJAFuNVK4iDkbM4cmESH9k1n0avb\nucKgCrmK+A7UHUUB1JOEHcEARHoYqnqXd4yCj0fKu2VfVSE1XyWc3wTBo++H3Mj4\nQKOO19fJBCU8X4AQmKEsFRduVZ4AxFf9gucTWV+L94z4P2PT/l3KvdtJXemAlJ3W\npjDbYZ8qD3z2d8ppYQ+PL3KUhzVOYLP5PEwfmHSeDfNLG+qi29N2f9AGYpUD9rCl\nD4S9qpz7AgMBAAECgf9MvakjbDhClaYvxLaVL80JQQ5OQY8Vnlp0Bb2RFA8C5mdN\ne0aAtmXcNuDbHD1fjkK0II/Cnktv2un32yZGf0+8JOJ4RfnaDulWD9durjsOH/GX\nqYvfgFSyiaBi6aOTiaJ0CIunnNEw5Ors5d0AXbVQSl8koNz3De7lTAUfHTTCfUJ2\nuqMr/q8iNBCerxgkLFEiAxoqA0Ho+FbB6p+XlSvyfZYis+/4K7d97hjScXDmfPVQ\nt3fmF6K7LcnAh5gsX4j2BYzXPbesmh5EskNaYamuPaAHZDIHO8KDhTTnmNgradhm\nUJn6xADOmMyo/pR4SaI3vMzbrH4QCOGf5k41eBECgYEAyPiBl9XxDxptH50B/0Hg\nOIf48NjHaRBgfH59RC53s+zXb3C0emsAW2EK2RMjW4UjzKF+MLK5/roqdPo0/y8r\nGQWwNYGTZLUeLX7RToWQseDCn1gWtzvaVZFll7RmYS7U0ZI6qgeCg4u+ZvLWk+ic\n5pQWduVYJ25wqJkgE7DPnfMCgYEAwwC6kyBiqiLmJYelfWVUyTrPAEZjVMAsrMUO\nalSpFtWIvIaaQNCZkEYXsoynba737tOwsn1tG1p7mcrfJWcNCOyA/dOC7AdVmyhT\nfdTc3TQ2+laIhgoYGulIFd8wn2TZpu5Vaab6tr6pbz1rbRLyQFK1x6Zper5c6s3e\nSu633tkCgYEArX9sUaqPG1zTDFG9oaI7clJgpXxgWuGaip+ggTYkfR5gtoJ0LKMn\ngbv7Y3/ULHR6fXSFvoDtdW0+rhI7onoUGNwCTY75sh1yWhB7nfBNBGNnYazon3N6\ngBivvhItuIR3kh1Nq/AjynDgBXxrpvFQUvdRlX9VZWVAuSzItncUJeUCgYEArFRv\njegX6Z1v4IjQ4lFzrWYwW2DZFaPDl2eKRsPMrqZE8b7OgSsYGt0mwh71M8RlzYT8\n6bBYhMzg4Ffd/lLkvRctI6QRVn9g0v6/UjuUeFRVpcRlYHd5OAcjMlkMwkBA7PpB\nN15ewLMcT3drAXi158xwYyEYpGWo/cSzh2sRyXkCgYButhj7Y/FyTleIbb/ksEXk\niAUBacFX1UTUIG22KNYlqLFUBQ2+o64aEkj68Co/ZHANXZHKVOUELcGd2edR+bxl\n/XACkc2q4969n40/1BhGR57XU96k4csFzYe1zS/EQVQSpboILzXDIUSab2Lf5NxB\nZCpbFQaKapUoewO5DeTnOw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bigtable-graphql@capable-conduit-300818.iam.gserviceaccount.com",
+  "client_id": "102737774982332689447",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bigtable-graphql%40capable-conduit-300818.iam.gserviceaccount.com"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "typeName": "Query",
+    "fieldName": "bookById",
+    "qualifiesCsv":"id,name,pageCount,authorId",
+    "table": "book",
+    "family": "entity",
+    "gqlAttr": "id"
+  },
+  {
+    "typeName": "Book",
+    "fieldName": "author",
+    "qualifiesCsv":"id,firstName,lastName",
+    "table": "author",
+    "family": "entity",
+    "gqlAttr": "authorId"
+  }
+]
