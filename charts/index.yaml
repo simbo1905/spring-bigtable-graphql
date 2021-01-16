@@ -3,32 +3,32 @@ entries:
   bigtable-graphql:
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2021-01-16T21:06:19.087321Z"
+    created: "2021-01-16T21:09:52.802646Z"
     description: Demo of running GraphQL over BigTable
     digest: da223e4bba275573e7d842ba0a6d01f9305f29e4e45e8d5e22917672411112b4
     name: bigtable-graphql
     type: application
     urls:
-    - https://simbo1905.github.io/bigquery-graphql/charts/bigtable-graphql-1.0.4.tgz
+    - http://simbo1905.github.io/bigtable-graphql/charts/bigtable-graphql-1.0.4.tgz
     version: 1.0.4
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2021-01-16T21:06:19.086294Z"
+    created: "2021-01-16T21:09:52.802189Z"
     description: Demo of running GraphQL over BigTable
     digest: 325dda5ee13c1ae7a7d84d946451a547b8afbae8ec101662aefb230272ef87ab
     name: bigtable-graphql
     type: application
     urls:
-    - https://simbo1905.github.io/bigquery-graphql/charts/bigtable-graphql-1.0.3.tgz
+    - http://simbo1905.github.io/bigtable-graphql/charts/bigtable-graphql-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2021-01-16T21:06:19.067356Z"
+    created: "2021-01-16T21:09:52.801698Z"
     description: Demo of running GraphQL over BigTable
     digest: 0e40ea8d91c65770364e3907d11929cb8aaa9fa4a6d17f9d95919f6aa61f859e
     name: bigtable-graphql
     type: application
     urls:
-    - https://simbo1905.github.io/bigquery-graphql/charts/bigtable-graphql-1.0.3.1.tgz
+    - http://simbo1905.github.io/bigtable-graphql/charts/bigtable-graphql-1.0.3.1.tgz
     version: 1.0.3.1
-generated: "2021-01-16T21:06:19.052354Z"
+generated: "2021-01-16T21:09:52.796106Z"
