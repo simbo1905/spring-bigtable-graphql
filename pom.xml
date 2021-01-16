@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.github.simbo1905</groupId>
 	<artifactId>bigtable-graphql</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<name>bigtable-graphql</name>
 	<description>Demo of running GraphQL over BigTable</description>
 	<scm>
