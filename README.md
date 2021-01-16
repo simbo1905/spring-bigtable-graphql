@@ -130,13 +130,20 @@ We need to create a secret containing your service account token.
 Using [these instructions](https://knative.dev/docs/serving/samples/secrets-go/) I found that this worked:
 
 ```sh
-kubectl create secret generic graphql-bigtable --from-file=bigtable-sa.json
+kubectl create secret generic graphql-bigtable-secret --from-file=bigtable-sa.json
 ```
 
 Grab the latest helm and put it on your path. Then install the KNative service with:
 
 ```sh
 helm install bigtable-graphql ./bigtable-graphql
+```
+
+you can view it and uninstall it with:
+
+```sh
+helm list
+helm uninstall bigtable-graphl
 ```
 
 Better yet use [github pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site) and create a chart repo:

@@ -14,13 +14,13 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: helloworld
+  name: bigtable-graph1l
   namespace: default
 spec:
   template:
     spec:
       containers:
-        - image: docker.io/simonmassey/bigtable-graphql:1.0.0
+        - image: docker.io/simonmassey/bigtable-graphql:1.0.3
 
           env:
             # This directs the Google Cloud SDK to use the identity and project
