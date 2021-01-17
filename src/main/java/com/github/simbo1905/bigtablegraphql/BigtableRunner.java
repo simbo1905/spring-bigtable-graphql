@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
-public class BigTableRunner {
+public class BigtableRunner {
     BigtableDataClient dataClient;
 
     @Value("${gcp.project")

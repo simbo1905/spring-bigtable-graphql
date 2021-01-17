@@ -24,10 +24,10 @@ import static graphql.schema.idl.TypeRuntimeWiring.newTypeWiring;
 
 @Component
 @Slf4j
-public class BigTableDataFetchers {
+public class BigtableDataFetchers {
 
     @Autowired
-    BigTableRunner bigTableRunner;
+    BigtableRunner bigTableRunner;
 
     @Value("${wirings.json}")
     String wirings;

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BigTableGraphQLApplication {
+public class BigtableGraphQLApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BigTableGraphQLApplication.class, args);
+		SpringApplication.run(BigtableGraphQLApplication.class, args);
 	}
 
 }

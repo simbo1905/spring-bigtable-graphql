@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Properties;
 
 @Slf4j
-public class BigTableInitializer {
+public class BigtableInitializer {
     private final BigtableDataClient dataClient;
     private final BigtableTableAdminClient adminClient;
     private final String colFamily;
@@ -120,7 +120,7 @@ public class BigTableInitializer {
         final String instanceId = String.valueOf(props.get("gcp.bigtable-instance"));
         final String colFamily = String.valueOf(props.get("gcp.bigtable-col-family"));
 
-        (new BigTableInitializer(projectId, instanceId, colFamily)).run();
+        (new BigtableInitializer(projectId, instanceId, colFamily)).run();
     }
 
     private void run() {
@@ -141,7 +141,7 @@ public class BigTableInitializer {
 
 
     @SneakyThrows
-    public BigTableInitializer(String projectId, String instanceId, String colFamily) {
+    public BigtableInitializer(String projectId, String instanceId, String colFamily) {
         this.colFamily = colFamily;
         // [START bigtable_hw_connect_veneer]
         // Creates the settings to configure a bigtable data client.

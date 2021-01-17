@@ -32,7 +32,7 @@ public class GraphQLProvider {
     }
 
     @Autowired
-    BigTableDataFetchers bigTableDataFetchers;
+    BigtableDataFetchers bigTableDataFetchers;
 
     @PostConstruct
     public void init() throws IOException {
