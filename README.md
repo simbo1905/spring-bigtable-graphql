@@ -100,15 +100,14 @@ That contains two wiring:
     * The column family to query is `entity`
     * The column qualifiers to pull back are `id,firstName,lastName`
 
-
-## BigTable Setup
+## Bigtable Setup
 
 On the Google Cloud console: 
 
- 1. Create the BigTable cluster. 
- 2. Create a service account `bigtable-graphql` and grant it bigtable admin perissions
+ 1. Create the Bigtable cluster. 
+ 2. Create a service account `bigtable-graphql` and grant it Bigtable admin perissions
  3. Set the cluster details in `application.properties`
- 4. Then run the main method in `com.github.simbo1905.bigtablegraphql.BigTableInitializer`
+ 4. Then run the main method in `com.github.simbo1905.bigtablegraphql.bigtableInitializer`
 
 That should create the tables and populate them with the values from the original demo. 
 
@@ -158,6 +157,3 @@ Now you can use the declarative helmfile.yaml to update all the services with:
 ```sh
 helmfile sync
 ```
-
-
-
