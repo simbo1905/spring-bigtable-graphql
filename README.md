@@ -1,5 +1,5 @@
 
-# A Demo Of GraphQL-Java Over Bigtable deployed onto KNative on GKE
+# A Demo Of GraphQL-Java over Bigtable deployed onto KNative on GKE
 
 This codebase is based on the tutorial [getting-started-with-spring-boot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/).
 
@@ -111,7 +111,7 @@ On the Google Cloud console:
 
 That should create the tables and populate them with the values from the original demo. 
 
-# Known Issues
+## Known Issues
 
 Debugging in IntelliJ in version 2020.3 it is refusing to pickup `application.properties` that file as [IDEA-221673](https://youtrack.jetbrains.com/issue/IDEA-221673?_ga=2.261730190.2065449588.1610823467-1536685944.1605418802). So to debug the code you need to hardcode your project details into the code. :unamused:
 
