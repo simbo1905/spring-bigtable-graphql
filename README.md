@@ -107,7 +107,7 @@ On the Google Cloud console:
  1. Create the Bigtable cluster. 
  2. Create a service account `bigtable-graphql` and grant it Bigtable admin perissions
  3. Set the cluster details in `application.properties`
- 4. Then run the main method in `com.github.simbo1905.bigtablegraphql.bigtableInitializer`
+ 4. Then run the main method in `com.github.simbo1905.bigtablegraphql.BigtableInitializer`
 
 That should create the tables and populate them with the values from the original demo. 
 
