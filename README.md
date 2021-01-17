@@ -39,7 +39,7 @@ Then we get back:
 
 You can run GraphQL Playbround to try this out: 
 
-![GraphQL Playground](https://raw.githubusercontent.com/simbo1905/bigtable-graphql/master/graphql-bigtable.png)
+![GraphQL Playground](https://raw.githubusercontent.com/simbo1905/bigquery-graphql/master/graphql-bigquery.png)
 
 The GraphQL scheme is:
 
