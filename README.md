@@ -69,18 +69,16 @@ This codebase uses a generic file to `wirings.json` to map GraphQL onto Bigtable
   {
     "typeName": "Query",
     "fieldName": "bookById",
-    "gqlAttr": "id",
-    "table": "book",
-    "family": "entity",
-    "qualifiesCsv":"id,name,pageCount,authorId"
+    "qualifiesCsv":"id,name,pageCount,authorId",
+    "family": "book",
+    "gqlAttr": "id"
   },
   {
     "typeName": "Book",
     "fieldName": "author",
-    "gqlAttr": "authorId",
-    "table": "author",
-    "family": "entity",
-    "qualifiesCsv":"id,firstName,lastName"
+    "qualifiesCsv":"id,firstName,lastName",
+    "family": "author",
+    "gqlAttr": "authorId"
   }
 ]
 ```
@@ -90,14 +88,12 @@ That contains two wiring:
  1. There is an object `Query`
     * With a field `bookById`
     * Where the row key will be passed as `id`
-    * The table to query is `book`
-    * The column family to query is `entity`
+    * The column family to query is `book`
     * The column qualifiers to pull back are `id,name,pageCount,authorId`
  2. There is a object on `Book`
     * With a field `author`
     * Where the row key will be passed as `authorId`
-    * The table to query is `author`
-    * The column family to query is `entity`
+    * The column family to query is `author`
     * The column qualifiers to pull back are `id,firstName,lastName`
 
 ## Bigtable Setup

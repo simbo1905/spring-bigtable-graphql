@@ -4,6 +4,7 @@ import com.google.api.gax.rpc.NotFoundException;
 import com.google.cloud.bigtable.admin.v2.BigtableTableAdminClient;
 import com.google.cloud.bigtable.admin.v2.BigtableTableAdminSettings;
 import com.google.cloud.bigtable.admin.v2.models.CreateTableRequest;
+import com.google.cloud.bigtable.admin.v2.models.ModifyColumnFamiliesRequest;
 import com.google.cloud.bigtable.data.v2.BigtableDataClient;
 import com.google.cloud.bigtable.data.v2.BigtableDataSettings;
 import com.google.cloud.bigtable.data.v2.models.Row;
@@ -20,11 +21,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * Please see https://cloud.google.com/bigtable/docs/schema-design
+ * They recommend one table, not two, so we have one entity table
+ * and put each entity in a different column family.
+ * Note in the real world we might do what they recommend of prefixing
+ * the key with the entity name or something else to optimise
+ * for range queries but in this demo we have unique IDs across
+ * entities and just fetch by ID so we are "keeping it simple".
+ */
 @Slf4j
 public class BigtableInitializer {
     private final BigtableDataClient dataClient;
     private final BigtableTableAdminClient adminClient;
-    private final String colFamily;
 
     private static List<Map<String, String>> books = Arrays.asList(
             ImmutableMap.of("id", "book-1",
@@ -118,31 +127,44 @@ public class BigtableInitializer {
 
         final String projectId = String.valueOf(props.get("gcp.project-id"));
         final String instanceId = String.valueOf(props.get("gcp.bigtable-instance"));
-        final String colFamily = String.valueOf(props.get("gcp.bigtable-col-family"));
 
-        (new BigtableInitializer(projectId, instanceId, colFamily)).run();
+        (new BigtableInitializer(projectId, instanceId)).run();
     }
 
     private void run() {
-        createTable("book", colFamily);
+        createTable("entity", "book");
         for( final Map<String,String> book : books) {
             final String key = book.get("id");
-            writeToTable("book", colFamily, key, book);
-            readSingleRow("book", key);
+            writeToTable("entity", "book", key, book);
+            readSingleRow("entity", key);
         }
 
-        createTable("author", colFamily);
+        addColumnFamily("entity", "author");
         for( final Map<String,String> author : authors) {
             final String key = author.get("id");
-            writeToTable("author", colFamily, key, author);
-            readSingleRow("author", key);
+            writeToTable("entity", "author", key, author);
+            readSingleRow("entity", key);
         }
+    }
+
+    private void addColumnFamily(String tableId, String colFamily) {
+        // [START bigtable_hw_create_table_veneer]
+        // Checks if table exists, creates table if does not exist.
+        if (adminClient.exists(tableId)) {
+            log.info("Creating family {} in table {}", colFamily, tableId);
+            ModifyColumnFamiliesRequest request =
+                    ModifyColumnFamiliesRequest.of(tableId).addFamily(colFamily);
+            adminClient.modifyFamilies(request);
+            log.info("Table {} created successfully", tableId);
+        } else {
+            log.error("table does not exist: {}", tableId);
+        }
+        // [END bigtable_hw_create_table_veneer]
     }
 
 
     @SneakyThrows
-    public BigtableInitializer(String projectId, String instanceId, String colFamily) {
-        this.colFamily = colFamily;
+    public BigtableInitializer(String projectId, String instanceId) {
         // [START bigtable_hw_connect_veneer]
         // Creates the settings to configure a bigtable data client.
         BigtableDataSettings settings =

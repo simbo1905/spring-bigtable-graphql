@@ -3,16 +3,14 @@
     "typeName": "Query",
     "fieldName": "bookById",
     "qualifiesCsv":"id,name,pageCount,authorId",
-    "table": "book",
-    "family": "entity",
+    "family": "book",
     "gqlAttr": "id"
   },
   {
     "typeName": "Book",
     "fieldName": "author",
     "qualifiesCsv":"id,firstName,lastName",
-    "table": "author",
-    "family": "entity",
+    "family": "author",
     "gqlAttr": "authorId"
   }
 ]

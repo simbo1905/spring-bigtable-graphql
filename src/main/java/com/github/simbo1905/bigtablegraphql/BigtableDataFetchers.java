@@ -32,6 +32,9 @@ public class BigtableDataFetchers {
     @Value("${wirings.json}")
     String wirings;
 
+    @Value("${gcp.bigtable-table}")
+    String table;
+
     @SneakyThrows
     public RuntimeWiring wire(RuntimeWiring.Builder wiring) {
         log.info("Loading wirings file: "+ wirings);
@@ -52,7 +55,7 @@ public class BigtableDataFetchers {
                     .type(newTypeWiring(wiringMetadata.typeName)
                             .dataFetcher(wiringMetadata.fieldName,
                                     bigTableRunner.queryForOne(
-                                            wiringMetadata.table,
+                                            table,
                                             wiringMetadata.family,
                                             qualifiers,
                                             wiringMetadata.gqlAttr
@@ -73,11 +76,6 @@ public class BigtableDataFetchers {
          * Wiring fieldName e.g. "bookById", "author"
          */
         String fieldName;
-
-        /**
-         * The BigTable table
-         */
-        String table;
 
         /**
          * The BigTable column family
