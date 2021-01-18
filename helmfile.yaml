@@ -7,3 +7,6 @@ releases:
     version: "1.0.4"
     values:
       - name: bigtable-graphql
+      - spring_profiles_active: gcp
+      - tag: "1.0.12"
+

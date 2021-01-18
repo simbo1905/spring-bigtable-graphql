@@ -3,3 +3,4 @@ name: bigtable-graphql
 namespace: default
 image: docker.io/simonmassey/bigtable-graphql
 tag: 1.0.3
+spring_profiles_active: default
