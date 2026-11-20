@@ -9,12 +9,22 @@ on:
   pull_request:
     branches: [ master ]
 
+# Cancel superseded pull_request runs only. This workflow's push trigger is
+# also the release path (mvn release:prepare / release:perform), so push runs
+# are serialised instead of cancelled: cancelling mid-release can leave a
+# pushed scm tag with no deployed artifacts.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     environment: bigtable-graphql
+
+    timeout-minutes: 30
 
     steps:
     - uses: actions/checkout@v2
